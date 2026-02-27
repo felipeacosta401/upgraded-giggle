@@ -1,0 +1,8 @@
+import random
+caracteres="+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+longitud=int(input("Ingresa la longitud"))
+contrasena=""
+for i in range(longitud):
+    caracter=random.choice(caracteres)
+    contrasena = contrasena + caracter
+print(contrasena)
