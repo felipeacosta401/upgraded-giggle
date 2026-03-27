@@ -1,0 +1,15 @@
+import discord
+from discord.ext import commands
+intents = discord.Intents.default()
+bot = commands.Bot( command_prefix="$",intents=intents)
+@bot.event
+async def on_ready():
+    print(f'Hemos iniciado sesión como {bot.user}')
+@bot.command()
+async def hola(ctx):
+    await ctx.send("Hola, aquí vas a aprender como cuidar el planeta reduciendo resudios. Puede ser en la casa, en el trabajo,etc")
+@bot.command()
+async def habito(ctx):
+    await ctx.send("Tu ayudas el planeta si tu usas bolsas de tela")
+
+#bot.run("MTQ4Njg3MDI0NzY0NTM4NDgwNA.GzrQT4.SvvqK-sOBmJtnnX4yhh3t62hRUFiW_nY7be")
